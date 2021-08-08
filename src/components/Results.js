@@ -101,8 +101,10 @@ export default function Results(props) {
                             <TableCell ></TableCell>
                             {tableHeaders.map(th => 
                                 <TableCell key={th.value} align="center">
+                                    <div style={{ display: "flex" }} >
                                     {th.sortable ? <SortCarat ordered={props.ordered} reorder={props.reorder} th={th}></SortCarat> : <></>}
-                                    {th.name}
+                                    <span >{th.name}</span>
+                                    </div>
                                 </TableCell>
                             )}
                         </TableRow>
